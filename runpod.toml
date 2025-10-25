@@ -2,7 +2,7 @@
 # RunPod Hub Template Configuration
 # Qwen-Image Serverless - Text-to-Image Generation
 
-name = "qwen-image-serverless"
+name = "qwen-image-api"
 dockerfile = "Dockerfile"
 
 # GPU Requirements (80GB VRAM recommended for 20B parameter model)

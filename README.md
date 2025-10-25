@@ -117,9 +117,23 @@ The template is configured with optimal settings in `runpod.toml`:
 - **GPU Types**: A100 80GB PCIe, H100 PCIe, H100 HBM3, H100 NVL, RTX 6000 Blackwell, RTX 6000 Blackwell Workstation, RTX Pro 6000 Max-Q Workstation
 - **Recommended VRAM**: 80GB
 - **Container Disk**: 5GB (code + dependencies)
-- **Network Volume**: 100GB (persistent model storage)
+- **Network Volume**: 100GB (persistent model storage) - **⚠️ REQUIRED**
 - **Workers**: 0-3 (auto-scaling)
 - **Timeout**: 600 seconds per job
+
+### ⚠️ Important: Network Volume Required
+
+**You MUST attach a network volume (minimum 100GB) when deploying this endpoint.**
+
+The Qwen-Image model is ~40GB and requires significant disk space. Without a network volume:
+- ❌ Deployment will fail due to insufficient disk space
+- ❌ Model cannot be downloaded or cached
+- ❌ Workers will crash during initialization
+
+The network volume:
+- ✅ Stores the model persistently across all workers
+- ✅ Prevents re-downloading the model on every cold start
+- ✅ Enables faster scaling and startup times
 
 ## Performance
 

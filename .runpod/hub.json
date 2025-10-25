@@ -7,35 +7,6 @@
   "config": {
     "runsOn": "GPU",
     "containerDiskInGb": 5,
-    "presets": [
-      {
-        "name": "Default (1024x1024, 50 steps)",
-        "defaults": {
-          "WIDTH": "1024",
-          "HEIGHT": "1024",
-          "NUM_INFERENCE_STEPS": "50",
-          "TRUE_CFG_SCALE": "4.0"
-        }
-      },
-      {
-        "name": "Fast (1024x1024, 30 steps)",
-        "defaults": {
-          "WIDTH": "1024",
-          "HEIGHT": "1024",
-          "NUM_INFERENCE_STEPS": "30",
-          "TRUE_CFG_SCALE": "4.0"
-        }
-      },
-      {
-        "name": "High Quality (1024x1024, 75 steps)",
-        "defaults": {
-          "WIDTH": "1024",
-          "HEIGHT": "1024",
-          "NUM_INFERENCE_STEPS": "75",
-          "TRUE_CFG_SCALE": "4.5"
-        }
-      }
-    ],
     "env": [
       {
         "key": "HF_HOME",

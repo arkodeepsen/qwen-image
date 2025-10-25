@@ -1,5 +1,5 @@
 {
-  "title": "Qwen-Image Serverless",
+  "title": "Qwen-Image",
   "description": "Production-ready text-to-image generation with Qwen-Image (20B). Exceptional text rendering in English and Chinese. Optimized for A100/H100 GPUs.",
   "type": "serverless",
   "category": "image",

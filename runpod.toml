@@ -1,0 +1,22 @@
+[runpod]
+# RunPod Hub Template Configuration
+# Qwen-Image Serverless - Text-to-Image Generation
+
+name = "qwen-image-serverless"
+dockerfile = "Dockerfile"
+
+# GPU Requirements (80GB VRAM recommended for 20B parameter model)
+gpu_types = ["NVIDIA A100 80GB PCIe", "NVIDIA H100 PCIe", "NVIDIA H100 HBM3", "NVIDIA H100 NVL", "NVIDIA RTX 6000 Ada Generation Blackwell Server Edition", "NVIDIA RTX 6000 Ada Generation Blackwell Workstation Edition", "NVIDIA RTX Pro 6000 Blackwell Max-Q Workstation Edition"]
+min_vram_gb = 80
+
+# Storage Configuration
+container_disk_gb = 5    # Code and dependencies
+volume_gb = 100          # Model cache (persistent across workers)
+
+# Execution Settings
+execution_timeout = 600  # 10 minutes per job
+
+# Auto-scaling Configuration
+min_workers = 0          # Scale to zero when idle
+max_workers = 3          # Maximum concurrent workers
+scale_down_delay = 60    # Seconds before scaling down

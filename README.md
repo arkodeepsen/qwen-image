@@ -1,5 +1,7 @@
 # Qwen-Image Serverless
 
+[![RunPod](https://api.runpod.io/badge/arkodeepsen/qwen-image)](https://console.runpod.io/hub/arkodeepsen/qwen-image)
+
 A production-ready RunPod serverless endpoint for Alibaba's Qwen-Image model - a powerful text-to-image generation model with superior text rendering capabilities in both English and Chinese.
 
 ## Features

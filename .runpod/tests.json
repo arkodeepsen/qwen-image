@@ -1,0 +1,77 @@
+{
+  "tests": [
+    {
+      "name": "basic_text_to_image",
+      "input": {
+        "prompt": "A serene mountain landscape at sunset",
+        "width": 1024,
+        "height": 1024,
+        "num_inference_steps": 30,
+        "true_cfg_scale": 4.0
+      },
+      "timeout": 60000
+    },
+    {
+      "name": "chinese_text_rendering",
+      "input": {
+        "prompt": "Chinese calligraphy with the character '和' (harmony) in traditional ink style",
+        "width": 1024,
+        "height": 1024,
+        "num_inference_steps": 50,
+        "true_cfg_scale": 4.0
+      },
+      "timeout": 90000
+    },
+    {
+      "name": "english_text_rendering",
+      "input": {
+        "prompt": "A neon sign that reads 'OPEN 24/7' in bright blue letters",
+        "width": 1024,
+        "height": 1024,
+        "num_inference_steps": 50,
+        "true_cfg_scale": 4.0
+      },
+      "timeout": 90000
+    },
+    {
+      "name": "reproducible_generation",
+      "input": {
+        "prompt": "A cute robot sitting at a desk",
+        "width": 1024,
+        "height": 1024,
+        "num_inference_steps": 50,
+        "true_cfg_scale": 4.0,
+        "seed": 42
+      },
+      "timeout": 90000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA A100 80GB PCIe",
+    "gpuCount": 1,
+    "env": [
+      {
+        "key": "HF_HOME",
+        "value": "/runpod-volume"
+      },
+      {
+        "key": "TRANSFORMERS_CACHE",
+        "value": "/runpod-volume"
+      },
+      {
+        "key": "HF_HUB_CACHE",
+        "value": "/runpod-volume"
+      }
+    ],
+    "allowedCudaVersions": [
+      "12.8",
+      "12.7",
+      "12.6",
+      "12.5",
+      "12.4",
+      "12.3",
+      "12.2",
+      "12.1"
+    ]
+  }
+}

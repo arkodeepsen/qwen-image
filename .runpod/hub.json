@@ -1,0 +1,54 @@
+{
+  "title": "Qwen-Image Serverless",
+  "description": "Production-ready text-to-image generation with Qwen-Image (20B). Exceptional text rendering in English and Chinese. Optimized for A100/H100 GPUs.",
+  "type": "serverless",
+  "category": "image",
+  "iconUrl": "https://raw.githubusercontent.com/QwenLM/Qwen-Image/main/assets/logo.png",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 5,
+    "presets": [
+      {
+        "name": "Default (1024x1024, 50 steps)",
+        "defaults": {
+          "WIDTH": "1024",
+          "HEIGHT": "1024",
+          "NUM_INFERENCE_STEPS": "50",
+          "TRUE_CFG_SCALE": "4.0"
+        }
+      },
+      {
+        "name": "Fast (1024x1024, 30 steps)",
+        "defaults": {
+          "WIDTH": "1024",
+          "HEIGHT": "1024",
+          "NUM_INFERENCE_STEPS": "30",
+          "TRUE_CFG_SCALE": "4.0"
+        }
+      },
+      {
+        "name": "High Quality (1024x1024, 75 steps)",
+        "defaults": {
+          "WIDTH": "1024",
+          "HEIGHT": "1024",
+          "NUM_INFERENCE_STEPS": "75",
+          "TRUE_CFG_SCALE": "4.5"
+        }
+      }
+    ],
+    "env": [
+      {
+        "key": "HF_HOME",
+        "value": "/runpod-volume"
+      },
+      {
+        "key": "TRANSFORMERS_CACHE",
+        "value": "/runpod-volume"
+      },
+      {
+        "key": "HF_HUB_CACHE",
+        "value": "/runpod-volume"
+      }
+    ]
+  }
+}

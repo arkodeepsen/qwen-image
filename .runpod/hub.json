@@ -3,7 +3,7 @@
   "description": "Production-ready text-to-image generation with Qwen-Image (20B). Exceptional text rendering in English and Chinese. Optimized for A100/H100 GPUs.",
   "type": "serverless",
   "category": "image",
-  "iconUrl": "https://raw.githubusercontent.com/QwenLM/Qwen-Image/main/assets/logo.png",
+  "iconUrl": "https://cdn.prod.website-files.com/67d20fb9f56ff2ec6a7a657d/685b40411e38197aff6351df_poddy-3.webp",
   "config": {
     "runsOn": "GPU",
     "containerDiskInGb": 5,
